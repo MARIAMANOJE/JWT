@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <nav>
+            <h4>node my sql</h4>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/login">LOGIN</a></li>
+                <li><a href="/register">REGISTER</a></li>
+            </ul>
+        </nav>
+
+        <div class="container mt-4">
+            <div class="card">
+                <div class="card-header">
+                    register Form
+                </div>
+                <div class="card-body">
+                    <form action="/auth/register" method="POST">
+                        <div class="mb-3">
+                            <label for="name"
+                                class="form-label">name</label>
+                            <input type="text" class="form-control"
+                                id="name" name="name"
+                               >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email"
+                                class="form-label">email</label>
+                            <input type="email" class="form-control"
+                                id="email" name="email">
+                        </div>
+
+                         <div class="mb-3">
+                            <label for="password"
+                                class="form-label">password</label>
+                            <input type="password" class="form-control"
+                                id="password" name="password">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="passwordConfirm"
+                                class="form-label">Confirmpassword</label>
+                            <input type="password" class="form-control"
+                                id="passwordConfirm" name="passwordConfirm">
+                        </div>
+
+
+                       
+                        <button type="submit"
+                            class="btn btn-primary">Register user</button>
+                    </form>
+
+                </div>
+            </div>
+            {{#if message}}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+            {{/if}}
+        </div>
+    </body>
+</html>
